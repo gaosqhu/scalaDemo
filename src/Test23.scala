@@ -29,6 +29,16 @@ object Test23 extends App {
     }
     counts
   }
+
   println(countWords("See Spot run! Run Spot. Run!"))
 
+  //----------------------------------------//
+  val nums = Map("i" -> 1, "k" -> 2)
+  nums + ("h" -> 8)
+  nums - "i"
+  println(nums)
+
+  val num2 = mutable.Map("i" -> 1, "k" -> 2)
+  num2 += ("h" -> 3)
+  println(num2)
 }

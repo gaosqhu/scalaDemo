@@ -1,3 +1,4 @@
+import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 
 /**
@@ -18,4 +19,16 @@ object Test23 extends App {
   def hasUpperCase(s: String) = s.exists(_.isUpper)
 
   println(hasUpperCase("dddffUdos"))
+
+  def countWords(s: String) = {
+    val counts = mutable.Map.empty[String, Int]
+    for (rawWord <- s.split("[ ,!.]+")) {
+      val word = rawWord toLowerCase
+      val oldCount = if (counts.contains(word)) counts(word) else 0
+      counts += (word -> (oldCount + 1))
+    }
+    counts
+  }
+  println(countWords("See Spot run! Run Spot. Run!"))
+
 }

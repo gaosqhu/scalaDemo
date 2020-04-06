@@ -14,4 +14,8 @@ object Test23 extends App {
   buf += 2
   3 +=: buf
   buf.foreach(println)
+
+  def hasUpperCase(s: String) = s.exists(_.isUpper)
+
+  println(hasUpperCase("dddffUdos"))
 }

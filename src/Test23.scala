@@ -41,4 +41,9 @@ object Test23 extends App {
   val num2 = mutable.Map("i" -> 1, "k" -> 2)
   num2 += ("h" -> 3)
   println(num2)
+  //--------------------------//
+  //val tmp1 = Map("i" -> 1, "j" -> 2)
+  //语法糖
+  var tmp1 = Map("i" -> 1, "j" -> 2)
+  tmp1 += ("l" -> 3)
 }
